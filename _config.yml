@@ -18,16 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Mathieu Sarrazy
+email: sarrazy.mathieu@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Contrairement aux autres instruments à cordes, le piano demande que l'accord 
+  soit fait par un professionnel. Mon parcours est quelque peu atypique, j’ai 
+  eu besoin de trouver du manuel et du mouvement dans ma profession, de me recentrer 
+  sur des valeurs plus simples et artisanales. 
+  Un travail plus humain et plus riche de sens. 
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# twitter_username: jekyllrb
+# github_username:  jekyll
 
 # Build settings
 theme: minima
@@ -54,3 +57,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README*
+  - index.html
+  - assets/img/drive-download-20210315T224006Z-001*
+
