@@ -8,10 +8,13 @@
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
       </div>
-
+      
+	  {% if include.map %}
       <div class="map">
-		<iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d369143.06322819623!2d6.699636!3d43.712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQ1JzU4LjAiTiA2wrAzMyc0OC45IkU!5e0!3m2!1sfr!2sbg!4v1615846457991!5m2!1sfr!2sbg" frameborder="0" allowfullscreen loading="lazy"></iframe>
+		<iframe style="border:0; width: 100%; height: 350px;" src="{{ include.map }}" 
+		frameborder="0" allowfullscreen loading="lazy"></iframe>
       </div>
+      {% endif %}
 
       <div class="container mt-5">
 
@@ -20,7 +23,7 @@
             <div class="col-lg-3 col-md-6 info">
               <i class="bi bi-geo-alt"></i>
               <h4>Localité:</h4>
-              <p>PACA<br>De Nice à Marseille</p>
+              <p>{{ site.data.user.coverArea.label | markdownify }}</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
@@ -46,7 +49,7 @@
     height: 1218px;
     overflow: hidden;
 ">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ3XiqkFkXNDCgGeC3CXIov9JMhvVMYz9THLpwqCYZkSOKwQ/viewform?embedded=true" 
+			<iframe src="{{page.form.google}}" 
 					width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
         </form>
 		<!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">

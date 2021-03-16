@@ -42,7 +42,7 @@ gallery:
   - assets/img/gallery/piano-915784.jpg
 
 form:
-	google: https://docs.google.com/forms/d/e/1FAIpQLSeJ3XiqkFkXNDCgGeC3CXIov9JMhvVMYz9THLpwqCYZkSOKwQ/viewform?embedded=true
+  google: https://docs.google.com/forms/d/e/1FAIpQLSeJ3XiqkFkXNDCgGeC3CXIov9JMhvVMYz9THLpwqCYZkSOKwQ/viewform?embedded=true
 ---
 
 
