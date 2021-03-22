@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+{%- unless page.header == false -%}
+	{%- include header.html data=page.header -%}
+{%- endunless -%}
+
+<main id="main" class="page-content" aria-label="Content">
+	{%- for key in page -%}
+		{%- if key[0] == 'title' or key[0] == 'content' or key[0] == 'header' or key[0] == 'footer' or key[0] == 'layout' or key[0] == 'dir' or key[0] == 'name' or key[0] == 'path' or key[0] == 'url' -%}
+			{%- continue -%}
+		<!-- { %- elsif key[0] == 'content' -%} -->
+			<!-- { { page.content | markdownify }} -->
+			<!-- {  { content | markdownify }} -->
+		{%- else -%}
+			{%- assign file = key[0] -%}
+			{%- assign data = key[1] -%}
+			{% include {{ file }} data=data %}
+		{%- endif -%}
+	{%- endfor -%}
+</main>
+
+{%- unless page.footer == false -%}
+	{%- include footer.html -%}
+{%- endunless -%}

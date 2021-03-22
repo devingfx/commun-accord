@@ -8,6 +8,19 @@
 # Questions fréquentes
 # Contact
 
+# - '_user_ [Présentation](#hero)'
+#   - '[Le numérique dans l’acoustique](#numerique)'
+# - '[Accord](#accord)'
+#   - '[Réglage mécanique](#reglage)'
+#   - '[Harmonisation](#harmonisation)'
+
+# - link[Réparation](#reparation)
+#   - '[Restauration, Ébénisterie & Laque](#restauration)'
+
+# - call-to-action: '[Contact](#contact)'
+
+
+
 - url: "#hero"
   icon:
   label: Présentation
@@ -39,10 +52,11 @@
     icon:
     label: Restauration, Ébénisterie & Laque
 
-- url: "#faq"
-  icon:
-  label: Questions fréquentes
+# - url: "#faq"
+#   icon:
+#   label: Questions fréquentes
 
 - url: "#contact"
   icon:
+  class: call-to-action book-a-table-btn
   label: Contact

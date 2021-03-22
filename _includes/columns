@@ -1,0 +1,23 @@
+
+<section id="about" class="about">
+	<div class="container-fluid">
+
+	<div class="row">
+	
+		{% for col in include.data.columns %}
+		
+			<div class="col-lg-{{col.size}} d-flex flex-column justify-content-center align-items-stretch {{col.class}}"
+				 {%- if col.background -%}
+				 	style="background-image: url('{{ col.background }}');"
+				  {%- endif -%}>
+				  
+				{{ col.content | markdownify }}
+				
+			</div>
+			
+		{% endfor %}
+		
+	</div>
+
+	</div>
+</section>

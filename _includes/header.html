@@ -9,7 +9,8 @@
   </section>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <header id="header" class="{{ include.data.mode | default: 'fixed-top' }} d-flex align-items-center header-transparent"
+  		  {%- if include.data.offset -%}style="--offset: {{ include.data.offset}}"{%- endif -%}>
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto">
@@ -22,7 +23,18 @@
 	  	<!-- { **% include nav.html item-class="nav-link scrollto" nav=site.data.main-menu %} -->
         <ul>
 		{% for menu in site.data.main-menu %}
-            <li><a class="nav-link scrollto {% if item.url == page.url %}active{% endif %}" href="{{ menu.url }}">{{ menu.label }}</a></li>
+            <!-- <li>{ { menu | markdownify }}</li> -->
+			{%- if menu.subnav -%}
+				<li class="dropdown"><a href="{{ menu.url }}"><span>{{ menu.label }}</span> <i class="bi bi-chevron-down"></i></a>
+					<ul>
+						{% for menu in menu.subnav %}
+							<li><a class="nav-link scrollto {{ menu.class }} {%- if menu.url == page.url -%}active{%- endif -%}" href="{{ menu.url }}">{{ menu.label }}</a></li>	
+						{% endfor %}
+					</ul>
+				</li>
+			{%- else -%}
+            	<li><a class="nav-link scrollto {{ menu.class }}{%- if menu.url == page.url -%}active{%- endif -%}" href="{{ menu.url }}">{{ menu.label }}</a></li>
+			{%- endif -%}
 		{% endfor %}
           
           <!-- <li><a class="nav-link scrollto" href="#about">About</a></li>
@@ -54,6 +66,20 @@
       </nav><!-- .navbar -->
 
       <!-- <a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a> -->
+	  {% if include.call-to-action %}
+	  {% include mailto label='Contact' mail=include.form.mailto subject='devis' class='book-a-table-btn' %}
+	  {% endif %}
 
     </div>
   </header><!-- End Header -->
+  {%- if include.data.mode == 'sticky-top' -%}
+  <script>
+	const el = document.querySelector("#header")
+	const observer = new IntersectionObserver( 
+		([e]) => e.target.classList.toggle("is-fixed", e.intersectionRatio < 1),
+		{ threshold: [1] }
+	)
+
+	observer.observe(el)
+  </script>
+  {%- endif -%}
