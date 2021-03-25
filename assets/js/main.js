@@ -153,10 +153,10 @@ if( getComputedStyle(header).position == 'sticky' )
 // background-blend-mode: luminosity, normal;
 // background-attachment: fixed;
 const bgs = {
-	hero: '/assets/img/backgrounds/w1920/abstract-2178720.jpg'
-,	about: '/assets/img/backgrounds/w1920/piano-4487573.jpg'
-,	gallery: '/assets/img/backgrounds/w1920/piano-2308370.jpg'
-,	contact: '/assets/img/backgrounds/h1280/piano-1143734.jpg'
+	hero: '../img/backgrounds/w1920/abstract-2178720.jpg'
+,	about: '../img/backgrounds/w1920/piano-4487573.jpg'
+,	gallery: '../img/backgrounds/w1920/piano-2308370.jpg'
+,	contact: '../img/backgrounds/h1280/piano-1143734.jpg'
 }
 Region( '-70px 0px 0px 0px', 0.3 ).on('section:not(#topbar)', e=> {
 	if(e.isIntersecting) {

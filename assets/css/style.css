@@ -92,7 +92,7 @@
 body {
   font-family: var(--readable-font), sans-serif;
   color: var(--grey-8-color);
-  --body-bg: url(/assets/img/backgrounds/w1920/abstract-2178720.jpg);
+  --body-bg: url(../img/backgrounds/w1920/abstract-2178720.jpg);
   background-image: radial-gradient( transparent, black), var(--body-bg);
   background-blend-mode: luminosity, normal;
   background-attachment: fixed;
