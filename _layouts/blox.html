@@ -10,9 +10,9 @@ layout: base
 	{%- for key in page -%}
 		{%- if key[0] == 'title' or key[0] == 'content' or key[0] == 'header' or key[0] == 'footer' or key[0] == 'layout' or key[0] == 'dir' or key[0] == 'name' or key[0] == 'path' or key[0] == 'url' -%}
 			{%- continue -%}
-		<!-- { %- elsif key[0] == 'content' -%} -->
+		<!-- { %- elsif key[0] == 'content' -%} marche pas -->
 			<!-- { { page.content | markdownify }} -->
-			<!-- {  { content | markdownify }} -->
+			<!-- { { content | markdownify }} -->
 		{%- else -%}
 			{%- assign file = key[0] -%}
 			{%- assign data = key[1] -%}

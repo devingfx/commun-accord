@@ -10,7 +10,7 @@
         <div class="row no-gutters">
 
 		{% for photo in include.data %}
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-3 col-md-4 mt-4">
             <div class="gallery-item">
               <a href="{{ photo }}" class="gallery-lightbox">
                 <img src="{{ photo }}" alt="" class="img-fluid">

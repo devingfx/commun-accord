@@ -1,0 +1,34 @@
+
+{%- assign slide = include.data -%}
+
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade">
+
+        <div class="carousel-inner" role="listbox">
+		  
+		  
+			<div class="carousel-item active" 
+				{% if slide.image %} style="background-image: radial-gradient( transparent, black), url('{{ slide.image }}'); background-blend-mode: luminosity, normal;"{% endif %}>
+				<div class="carousel-container">
+				<div class="carousel-content" style="width: 100%">
+					<h2 class="animate__animated animate__fadeInDown">{{ slide.title | markdownify }}</h2>
+					{% for txt in slide.texts %}
+						<p class="animate__animated animate__fadeInUp">{{ txt }}</p>
+					{% endfor %}
+					<div>
+					{% for action in slide.actions %}
+						<a href="{{ action.url }}" class="btn-book animate__animated animate__fadeInUp scrollto">{{ action.label }}</a>
+					{% endfor %}
+					</div>
+				</div>
+				</div>
+			</div>
+		  
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>

@@ -1,6 +1,6 @@
 
 
-  <!-- ======= Top Bar ======= -->
+
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
       <i class="bi bi-phone d-flex align-items-center"><span>{{ site.data.user.mobile }}</span></i>
@@ -8,12 +8,12 @@
     </div>
   </section>
 
-  <!-- ======= Header ======= -->
+
   <header id="header" class="{{ include.data.mode | default: 'fixed-top' }} d-flex align-items-center header-transparent"
   		  {%- if include.data.offset -%}style="--offset: {{ include.data.offset}}"{%- endif -%}>
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <div class="logo me-auto">
+      <div class="logo">
         <h1><a href="index.html">{{ site.title }}</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -63,7 +63,7 @@
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
 
       <!-- <a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a> -->
 	  {% if include.call-to-action %}
@@ -71,15 +71,4 @@
 	  {% endif %}
 
     </div>
-  </header><!-- End Header -->
-  {%- if include.data.mode == 'sticky-top' -%}
-  <script>
-	const el = document.querySelector("#header")
-	const observer = new IntersectionObserver( 
-		([e]) => e.target.classList.toggle("is-fixed", e.intersectionRatio < 1),
-		{ threshold: [1] }
-	)
-
-	observer.observe(el)
-  </script>
-  {%- endif -%}
+  </header>

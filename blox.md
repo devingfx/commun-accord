@@ -10,33 +10,43 @@ layout: blox
 header:
   mode: sticky-top
   
-hero:
-  - image: assets/img/backgrounds/w1920/abstract-2178720.jpg
-    title: "**Sarrazy** Mathieu"
-    texts:
-      - Technicien, accordeur / restaurateur de piano
-      - Diplômé de l’école Ignace Pleyel à Loos
-    actions:
-      - label: Contactez moi
-        url: "#contact"
+center-text:
+#   image: assets/img/backgrounds/w1920/abstract-2178720.jpg
+  title: "**Sarrazy** Mathieu"
+  texts:
+    - Technicien, accordeur / restaurateur de piano
+    - Diplômé de l’école Ignace Pleyel à Loos
+  actions:
+    - label: Contactez moi
+      url: "#contact"  
+
+# hero:
+#   - image: assets/img/backgrounds/w1920/abstract-2178720.jpg
+#     title: "**Sarrazy** Mathieu"
+#     texts:
+#       - Technicien, accordeur / restaurateur de piano
+#       - Diplômé de l’école Ignace Pleyel à Loos
+#     actions:
+#       - label: Contactez moi
+#         url: "#contact"
   
-  - image: assets/img/backgrounds/w1920/piano-4487573.jpg
-    title: Lorem Ipsum Dolor
-    texts:
-      - Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
-    actions:
-      - label: En savoir +
-        url: "#menu"
-      - label: Reserver
-        url: "#book-a-table"
+#   - image: assets/img/backgrounds/w1920/piano-4487573.jpg
+#     title: Lorem Ipsum Dolor
+#     texts:
+#       - Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
+#     actions:
+#       - label: En savoir +
+#         url: "#menu"
+#       - label: Reserver
+#         url: "#book-a-table"
   
-  - image: assets/img/backgrounds/w1920/piano-2308370.jpg
-    title: Sequi ea ut et est quaerat
-    texts:
-      - Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
-    actions:
-      - label: Faire un don
-        url: "#menu"
+#   - image: assets/img/backgrounds/w1920/piano-2308370.jpg
+#     title: Sequi ea ut et est quaerat
+#     texts:
+#       - Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
+#     actions:
+#       - label: Faire un don
+#         url: "#menu"
   
 about:
   layout: columns
@@ -77,9 +87,12 @@ contact:
 #   map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1468196.3362798623!2d4.853396502545295!3d44.05091722310776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b668198af953ad%3A0xb71690263d16d1a7!2sProvence-Alpes-C%C3%B4te%20d&#39;Azur!5e0!3m2!1sfr!2sfr!4v1615932586366!5m2!1sfr!2sfr
   form:
     # external: https://docs.google.com/forms/d/e/1FAIpQLSeJ3XiqkFkXNDCgGeC3CXIov9JMhvVMYz9THLpwqCYZkSOKwQ/viewform?embedded=true
+    # external: https://cloud.p2p.legal/apps/forms/gnyMHL3n5i9y7bxg
     mailto: contact@exemple.com
 
 # footer: true
+
+# content: true
 
 # or all in a map:
 # blocks:
