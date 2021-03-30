@@ -37,10 +37,13 @@ tracking:
     trackerUrl: piwik.p2p.legal/
     siteId: 13
 
+collections:
+  - subjects
+
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -16,7 +16,7 @@
   <!-- theme CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  {%- if site.tracking.matomo -%}
+  {%- if jekyll.environment == "production" and site.tracking.matomo -%}
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];

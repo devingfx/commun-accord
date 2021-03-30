@@ -14,9 +14,26 @@ layout: base
 			<!-- { { page.content | markdownify }} -->
 			<!-- { { content | markdownify }} -->
 		{%- else -%}
-			{%- assign file = key[0] -%}
-			{%- assign data = key[1] -%}
-			{% include {{ file }} data=data %}
+			{%- assign name = key[0] -%}
+			{%- assign blox = key[1] -%}
+			{%- for key in blox -%}
+				{%- assign type = key[0] -%}
+				{%- assign data = key[1] -%}
+			{%- endfor -%}
+			<!-- { %- capture path -%}_includes/{ {type}}{ %- endcapture -%} -->
+			<!-- <pre>
+				name = { { name }}
+				type = { { type }}
+				data = { { data }}
+				<!-- { % if fileExists=="true" %}
+					exists
+				{ % else %}
+					dont exists
+				{ % endif %} - ->
+			</pre> -->
+			{% include {{ type }} name=name data=data %}
+			<!-- { % include {{ type }} name={{ name }} data=data %} -->
+			<!-- { % include {{ file }} data=data %} -->
 		{%- endif -%}
 	{%- endfor -%}
 </main>

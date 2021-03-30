@@ -12,6 +12,7 @@
   /* --logo-font: "Indie Flower"; */
   --speach-font: "Comic Neue";
 
+  --topbar-height: 50px;
 
   --accent-color-deeper:  #ff9b08;
   --accent-color:         #ffb03b;
@@ -92,14 +93,49 @@
 body {
   font-family: var(--readable-font), sans-serif;
   color: var(--grey-8-color);
-  --body-bg: url(../img/backgrounds/w1920/abstract-2178720.jpg);
-  background-image: radial-gradient( transparent, black), var(--body-bg);
-  background-blend-mode: luminosity, normal;
+  --body-bg: url(../img/backgrounds/w1920/Acceuil.jpg);
+  /* background-image: radial-gradient( transparent, black), var(--body-bg); */
+  background-image: var(--body-bg);
+  /* background-blend-mode: luminosity, normal; */
   background-attachment: fixed;
   background-size: cover;
-  transition: background-image 1s;
+  transition: background-image 3s;
+  background-position: 80%;
 }
-section.about, section#hero { background: transparent }
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 3s;
+	
+    /* background: radial-gradient(transparent,black); */
+    /* background: radial-gradient(transparent, black 80%); */
+    --body-bg-fx: 90deg;
+    background-image: linear-gradient(var(--body-bg-fx),rgba(0,0,0,0.8) 15%,transparent, rgba(0,0,0,0.8) 85%);
+    background-size: 200%;
+    /* background-position-x: 100%; */
+    
+	
+	/* backdrop-filter: brightness(0.5) saturate(0); */
+    /* filter: saturate(0.5); */
+	/* background-position-x: -200px; */
+
+
+    /* background-size: 50%; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: -400px; */
+    /* background-position-x: 400px; */
+    /* background: linear-gradient(-90deg,transparent, black 80%); */
+    /* background-position-x: -400px; */
+}
+
+section { margin: 100px 0; background: transparent }
+section#hero { margin: 0 }
+/* section.about, section#hero {  } */
 
 a {
   text-decoration: none;
@@ -154,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 #topbar {
   padding: 0;
   font-size: 15px;
-  height: 50px;
+  height: var(--topbar-height);
   transition: all 0.5s;
   background: rgba(26, 24, 22, 0.8);
   z-index: 996;
@@ -165,19 +201,20 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 
-#topbar.topbar-scrolled {
+.scrolled #topbar {
   top: -50px;
 }
 
 #topbar i {
   color: var(--accent-color);
   line-height: 0;
+  padding-right: 5px;
 }
 
-#topbar i span {
+#topbar span {
   color: var(--white-color);
   font-style: normal;
-  padding-left: 5px;
+  padding: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -188,33 +225,34 @@ h1, h2, h3, h4, h5, h6 {
 #header .navbar { transition: all 1s }
 
 #header {
+  top: var(--topbar-height, 0);
   height: 70px;
   z-index: 997;
   transition: all 0.5s;
   padding: 10px 0;
   background: rgba(26, 24, 22, 0.85);
 }
-#header > .container-fluid {
+#header.sticky-top > .container-fluid {
   flex-wrap: wrap;
 }
-#header .logo {
+#header.sticky-top .logo {
     flex: 0 0 100%;
     height: 0;
 	opacity: 0;
     transform: translate(100px, -100px);
 	pointer-events: none;
 }
-#header .navbar {
+#header.sticky-top .navbar {
     width: 485px;
     margin: auto;
     place-content: flex-end;
 }
-#header.header-scrolled .logo {
+#header.sticky-top.header-stuck .logo {
     opacity: 1;
 	transform: translate(0px, 5px);
 	pointer-events: all;
 }
-#header.header-scrolled .navbar {
+#header.sticky-top.header-stuck .navbar {
     width: 100%;
 }
 
@@ -222,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 
-#header.header-scrolled {
+.scrolled #header {
   top: 0;
   background: rgba(26, 24, 22, 0.85);
 }
@@ -256,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
-#header  .call-to-action {
+#header .call-to-action {
   background: var(--accent-color);
   color: var(--white-color);
   border-radius: 50px;
@@ -269,13 +307,13 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
-#header  .call-to-action:hover {
+#header .call-to-action:hover {
   background: var(--accent-color-deeper);
   color: var(--white-color);
 }
 
 @media (max-width: 992px) {
-  #header  .call-to-action {
+  #header .call-to-action {
     margin: 0 15px 0 0;
     padding: 8px 20px;
     letter-spacing: 1px;
@@ -494,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: rgba(39, 37, 34, 0.8);
+  /* background-color: rgba(39, 37, 34, 0.8); */
   overflow: hidden;
   padding: 0;
 }
@@ -510,7 +548,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .carousel-item::before {
   content: '';
-  background-color: rgba(12, 11, 10, 0.5);
+  /* background-color: rgba(12, 11, 10, 0.5); */
   position: absolute;
   top: 0;
   right: 0;
@@ -742,46 +780,46 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
+/* section {
   background: var(--11-color);
-}
+} */
 
-.about .content {
+section .content {
   padding: 0 80px;
 }
 
-.about .content h3 {
+section .content h3 {
   font-weight: 400;
   font-size: 34px;
   color: var(--8-color);
 }
 
-.about .content h4 {
+section .content h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
 }
 
-.about .content p {
+section .content p {
   font-size: 15px;
   color: var(--grey-8-color);
 }
 
-.about .content ul {
+section .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li + li {
+section .content ul li + li {
   margin-top: 15px;
 }
 
-.about .content ul li {
+section .content ul li {
   position: relative;
   padding-left: 26px;
 }
 
-.about .content ul i {
+section .content ul i {
   font-size: 20px;
   color: var(--accent-color);
   position: absolute;
@@ -789,7 +827,7 @@ section {
   top: 2px;
 }
 
-.about .content p:last-child {
+section .content p:last-child {
   margin-bottom: 0;
 }
 
@@ -876,12 +914,16 @@ section {
 
 @media (max-width: 1024px) {
   .about .content, .about .accordion-list {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
 @media (max-width: 992px) {
+  .about .content, .about .accordion-list {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
   .about .content {
     padding-top: 30px;
   }

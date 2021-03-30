@@ -1,26 +1,38 @@
 
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
+<section id="{{name}}" class="gallery {{name}}">
+	<div class="container-fluid">
 
-        <div class="section-title">
-          <h2>Quelques photos <strong>dans l'atelier</strong></h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
+		{%- assign subject = site.subjects | where: "relative_path", include.data | first -%}
 		
-        <div class="row no-gutters">
+		<div class="section-title">
+			{%- if subject -%}
+				{{ subject.content }}
+			<!-- { %- else -%} -->
+				<!-- { { include.data | markdownify }} -->
+			{%- endif -%}
+		</div>
+		
+		
+		<div class="row no-gutters">
+		
+			{%- if subject -%}
+				{%- assign photos = subject.photos -%}
+			{%- else -%}
+				{%- assign photos = include.data.photos -%}
+			{%- endif -%}
+			
+			{% for photo in photos %}
+			<div class="col-lg-3 col-md-4 mt-4">
+				<div class="gallery-item">
+				<a href="{{ photo }}" class="gallery-lightbox">
+					<img src="{{ photo }}" alt="" class="img-fluid">
+				</a>
+				</div>
+			</div>
+			{% endfor %}
 
-		{% for photo in include.data %}
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="gallery-item">
-              <a href="{{ photo }}" class="gallery-lightbox">
-                <img src="{{ photo }}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-		{% endfor %}
+		</div>
 
-        </div>
-
-      </div>
-    </section>
+	</div>
+</section>
 

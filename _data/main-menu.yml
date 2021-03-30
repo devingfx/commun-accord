@@ -21,36 +21,33 @@
 
 
 
-- url: "#hero"
+- url: "#about"
   icon:
   label: Présentation
-  subnav:
-  
-  - url: "#numerique"
-    icon:
-    label: Le numérique dans l’acoustique
 
 - url: "#accord"
   icon:
   label: Accord
-  subnav:
   
-  - url: "#reglage"
-    icon:
-    label: Réglage mécanique
+- url: "#reglage"
+  icon:
+  label: Réglage mécanique
 
-  - url: "#harmonisation"
-    icon:
-    label: Harmonisation
+- url: "#harmonisation"
+  icon:
+  label: Harmonisation
 
 - url: "#reparation"
   icon:
   label: Réparation
-  subnav:
 
-  - url: "#restauration"
-    icon:
-    label: Restauration, Ébénisterie & Laque
+- url: "#restauration"
+  icon:
+  label: Restauration #, Ébénisterie & Laque
+  
+- url: "#numerique"
+  icon:
+  label: Le numérique #dans l’acoustique
 
 # - url: "#faq"
 #   icon:

@@ -8,10 +8,10 @@
         <div class="carousel-inner" role="listbox">
 		  
 		  
-			<div class="carousel-item active" 
-				{% if slide.image %} style="background-image: radial-gradient( transparent, black), url('{{ slide.image }}'); background-blend-mode: luminosity, normal;"{% endif %}>
+			<div class="carousel-item active">
 				<div class="carousel-container">
-				<div class="carousel-content" style="width: 100%">
+				<div class="carousel-content" style="width: 100%"
+				{% if slide.image %} data-body-bg="{{ slide.image }}"{% endif %}>
 					<h2 class="animate__animated animate__fadeInDown">{{ slide.title | markdownify }}</h2>
 					{% for txt in slide.texts %}
 						<p class="animate__animated animate__fadeInUp">{{ txt }}</p>

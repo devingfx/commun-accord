@@ -75,26 +75,34 @@
   }
 
   /**
+   * Important nodes selection
+   */
+  const $body = document.body
+  const $topbar = document.querySelector('#topbar')
+  const $header = document.querySelector('#header')
+  
+  /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
 //   let selectHeader = select('#header')
 //   let selectTopbar = select('#topbar')
-//   if (selectHeader) {
-//     const headerScrolled = () => {
-//       if (window.scrollY > 100) {
-//         selectHeader.classList.add('header-scrolled')
-//         if (selectTopbar) {
-//           selectTopbar.classList.add('topbar-scrolled')
-//         }
-//       } else {
-//         selectHeader.classList.remove('header-scrolled')
-//         if (selectTopbar) {
-//           selectTopbar.classList.remove('topbar-scrolled')
-//         }
-//       }
-//     }
-//     window.addEventListener('load', headerScrolled)
-//     onscroll(document, headerScrolled)
+//   if ($header) {
+    const headerScrolled = () => {
+	  $body.classList.toggle( 'scrolled', window.scrollY > 100 )
+    //   if (window.scrollY > 100) {
+    //     $body.classList.add('scrolled')
+    //     // if ($topbar) {
+    //     //   $topbar.classList.add('topbar-scrolled')
+    //     // }
+    //   } else {
+    //     $body.classList.remove('scrolled')
+    //     // if ($topbar) {
+    //     //   $topbar.classList.remove('topbar-scrolled')
+    //     // }
+    //   }
+    }
+    window.addEventListener('load', headerScrolled)
+    onscroll(document, headerScrolled)
 //   }
 
 // const Foo = (foo,state = {})=>({...state, foo})
@@ -136,14 +144,14 @@ const Region = ( margin, threshold = 0,
 // const visibleRegion = 
 // Region( -100,0,0,0 )
 // Region( '50%',0,0,0 )
-const $topbar = document.querySelector('#topbar')
-const $header = document.querySelector('#header')
 
-if( getComputedStyle(header).position == 'sticky' )
-	Region( '-1px 0px 0px 0px', [0,1] )
+const $headerStyle = getComputedStyle($header)
+
+if( $headerStyle.position == 'sticky' )
+	Region( `-${parseFloat($headerStyle.top)+1}px 0px 0px 0px`, [0,1] )
 		.on( `#header`, e=> {
 			// console.log(e.intersectionRatio != 1)
-			e.target.classList.toggle("header-scrolled", e.intersectionRatio != 1)
+			e.target.classList.toggle("header-stuck", e.intersectionRatio != 1)
 			if( topbar )
 				topbar.classList.toggle("topbar-scrolled", e.intersectionRatio != 1)
 		})
@@ -152,21 +160,45 @@ if( getComputedStyle(header).position == 'sticky' )
 // background-image: radial-gradient( transparent, black), url(assets/img/backgrounds/w1920/abstract-2178720.jpg);
 // background-blend-mode: luminosity, normal;
 // background-attachment: fixed;
-const bgs = {
-	hero: '../img/backgrounds/w1920/abstract-2178720.jpg'
-,	about: '../img/backgrounds/w1920/piano-4487573.jpg'
-,	gallery: '../img/backgrounds/w1920/piano-2308370.jpg'
-,	contact: '../img/backgrounds/h1280/piano-1143734.jpg'
-}
-Region( '-70px 0px 0px 0px', 0.3 ).on('section:not(#topbar)', e=> {
-	if(e.isIntersecting) {
+// const bgs = {
+// 	hero: '.../img/backgrounds/w1920/abstract-2178720.jpg'
+// ,	about: '.../img/backgrounds/w1920/piano-4487573.jpg'
+// ,	gallery: '.../img/backgrounds/w1920/piano-2308370.jpg'
+// ,	contact: '.../img/backgrounds/h1280/piano-1143734.jpg'
+// }
+
+// let dbgdiv = document.createElement('div')
+// dbgdiv.style = `border: 1px solid red; position:fixed; z-index: 1000; pointer-events: none;
+// top: 70px; right: 0px; bottom: 100px; left: 0px;`
+// document.body.append( dbgdiv )
+// window.sectionRegion = 
+
+Region( '-70px 100px -100px 100px', 1 ).on('[data-body-bg]', e=> {
 		// console.log( e.intersectionRatio, e.target, 'visible:',  e.isVisible, 'Intersecting:',  e.isIntersecting )
+	if(e.isIntersecting) {
 		// e.intersectionRatio > 0 && ()
-		document.body.style.setProperty('--body-bg', `url("${bgs[e.target.id]}")` )
+		document.body.style.setProperty('--body-bg', `url("../img/backgrounds/${e.target.dataset.bodyBg}")` )
 	}
 })
 
 
+const altCss = new CSSStyleSheet()
+document.adoptedStyleSheets = [altCss]
+
+const shortcuts = {
+	is(e){ if( e.altKey && (e.code in this) ){ e.preventDefault(); return true } },
+	KeyA(){ altCss.replaceSync(`body:after { display: none }`) },
+	KeyB(){ altCss.replaceSync(`body:after {}`) },
+	KeyC(){ altCss.replaceSync(`body:after { background-image: radial-gradient(transparent, black) }`) },
+	KeyE(){ altCss.replaceSync(`body:after { backdrop-filter: saturate(0) }`) },
+	KeyF(){ altCss.replaceSync(`body:after { backdrop-filter: sepia(0.5) saturate(2) }`) },
+	
+	KeyG(){ altCss.replaceSync(`body:after { background-position-x: 0% !important }`) },
+	KeyD(){ altCss.replaceSync(`body:after { background-position-x: 100% !important }`) },
+}
+window.addEventListener('keydown', e=>
+	shortcuts.is(e) && shortcuts[e.code]()
+, true)
 
 
 

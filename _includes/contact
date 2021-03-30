@@ -16,19 +16,22 @@
 
       <div class="container mt-5">
 
-        <div class="info-wrap">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-              <i class="bi bi-geo-alt"></i>
-              <h4>Localité:</h4>
-              {{ site.data.user.coverArea.label | markdownify }}
-            </div>
+        <div class="row info-wrap">
+		    {%- for area in site.data.user.coverAreas -%}
+              <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                <i class="bi bi-geo-alt"></i>
+                <h4>{{ area.name }}:</h4>
+				{%- for city in area.cities -%}
+                  {{ city | markdownify }}
+		    	{%- endfor -%}
+              </div>
+		    {%- endfor -%}
 
-            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <!-- <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-clock"></i>
               <h4>Horaires:</h4>
               <p>Du lundi au vendredi:<br>De 9H00 à 19H00</p>
-            </div>
+            </div> -->
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-envelope"></i>
@@ -45,7 +48,7 @@
               	<a href="tel:{{phone}}">{{phone}}</a>
 			  {% endfor %}
             </div>
-          </div>
+
         </div>
 		
 		{% if include.data.form %}
@@ -88,16 +91,16 @@
 			<!-- { % include mailto label='Contact' mail=include.data.form.mailto subject='devis' class='book-a-table-btn' %} -->
 			
 			{% if include.data.form.mailto %}
-				<form action="mailto:{{include.data.form.mailto}}" role="form" class="form mailto"
+				<form action="mailto:{{include.data.form.mailto}}" role="form" class="row form mailto"
 					  onchange="this.action = this.action.split('?')[0] + '?' + Array.from(this.elements).filter(el=>el.name&&el.value).map(el=>el.name+'='+encodeURIComponent(el.value)).join('&')">
-					<div class="row">
-						<div class="col-md-6 form-group">
+					
+					<div class="col-md-6 form-group">
 						<input name="body" type="text" class="form-control" id="name" placeholder="Your Name" required>
-						</div>
-						<div class="col-md-6 form-group mt-3 mt-md-0">
-						<input name="cc" type="email" class="form-control" id="email" placeholder="Your Email" required>
-						</div>
 					</div>
+					<div class="col-md-6 form-group mt-3 mt-md-0">
+						<input name="cc" type="email" class="form-control" id="email" placeholder="Your Email" required>
+					</div>
+					
 					<div class="form-group mt-3">
 						<input name="subject" type="text" list="usual-subjects" class="form-control" id="subject" placeholder="Subject" required>
 						<datalist id="usual-subjects">
