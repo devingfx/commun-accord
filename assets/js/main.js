@@ -173,11 +173,14 @@ if( $headerStyle.position == 'sticky' )
 // document.body.append( dbgdiv )
 // window.sectionRegion = 
 
-Region( '-70px 100px -100px 100px', 1 ).on('[data-body-bg]', e=> {
+Region( '-70px 100px 0px 100px', 1 ).on('[data-body-bg]', e=> {
 		// console.log( e.intersectionRatio, e.target, 'visible:',  e.isVisible, 'Intersecting:',  e.isIntersecting )
 	if(e.isIntersecting) {
 		// e.intersectionRatio > 0 && ()
 		document.body.style.setProperty('--body-bg', `url("../img/backgrounds/${e.target.dataset.bodyBg}")` )
+		e.target.dataset.bodyBgPosition
+			? $body.style.backgroundPosition = e.target.dataset.bodyBgPosition
+			: $body.style.removeProperty( 'background-position' )
 	}
 })
 
@@ -198,7 +201,7 @@ const shortcuts = {
 }
 window.addEventListener('keydown', e=>
 	shortcuts.is(e) && shortcuts[e.code]()
-, true)
+, true )
 
 
 

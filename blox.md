@@ -59,6 +59,68 @@ hero:
 #         url: "#menu"
 
 
+# Accord
+accord:
+  columns:
+    - size: 7
+      offset: 1
+      content: _subjects/accord.md
+      class: content
+    # - size: 5
+    #   background: assets/img/about.png
+
+# Réglage mécanique
+reglage:
+  columns:
+    # - size: 5
+    #   background: assets/img/about.png
+    - size: 7
+      offset: 4
+      content: _subjects/reglage.md
+      class: content
+
+# Harmonisation
+harmonisation:
+  columns:
+    - size: 7
+      offset: 1
+      content: _subjects/harmonisation.md
+      class: content
+    # - size: 5
+    #   background: assets/img/about.png
+
+# Réparation
+reparation:
+  columns:
+    # - size: 5
+    #   background: assets/img/about.png
+    - size: 7
+      offset: 4
+      content: _subjects/reparation.md
+      class: content
+
+# Restauration, Ébénisterie & Laque
+restauration:
+  columns:
+    - size: 7
+      offset: 1
+      content: _subjects/restauration.md
+      class: content
+    # - size: 5
+    #   background: assets/img/about.png
+
+# Le numérique dans l’acoustique
+numerique:
+  columns:
+    # - size: 5
+    #   background: assets/img/about.png
+    - size: 7
+      offset: 4
+      content: _subjects/numerique.md
+      class: content
+
+
+
 # Présentation
 about:
   about:
@@ -82,62 +144,6 @@ about:
 #         Vers mes 40 ans, j’ai eu besoin de trouver du manuel et du mouvement dans ma profession tout en gardant de la technique et de l’intellectuel, de trouver de la proximité avec les gens, de me recentrer sur des valeurs plus simples et artisanales. Un travail plus humain et plus riche de sens.
         
 #         Je me suis longuement questionné sur un métier qui me permettrait de faire le lien entre ma personnalité, ma créativité, mon besoin de rigueur, la technique et le manuel. Toutes ces réflexions m’ont amené à conclure que le métier d’accordeur restaurateur de piano en serait ma synthèse.
-
-# Accord
-accord:
-  columns:
-    - size: 7
-      content: _subjects/accord.md
-      class: content
-    - size: 5
-    #   background: assets/img/about.png
-
-# Réglage mécanique
-reglage:
-  columns:
-    - size: 5
-    #   background: assets/img/about.png
-    - size: 7
-      content: _subjects/reglage.md
-      class: content
-
-# Harmonisation
-harmonisation:
-  columns:
-    - size: 7
-      content: _subjects/harmonisation.md
-      class: content
-    - size: 5
-    #   background: assets/img/about.png
-
-# Réparation
-reparation:
-  columns:
-    - size: 5
-    #   background: assets/img/about.png
-    - size: 7
-      content: _subjects/reparation.md
-      class: content
-
-# Restauration, Ébénisterie & Laque
-restauration:
-  columns:
-    - size: 7
-      content: _subjects/restauration.md
-      class: content
-    - size: 5
-    #   background: assets/img/about.png
-
-# Le numérique dans l’acoustique
-numerique:
-  columns:
-    - size: 5
-    #   background: assets/img/about.png
-    - size: 7
-      content: _subjects/numerique.md
-      class: content
-
-
 
 
   

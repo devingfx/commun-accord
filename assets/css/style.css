@@ -22,6 +22,8 @@
   --accent-color:         #9d 4edb;
   --accent-color-lighter: #bb 6ff7; */
 
+  --hero-bg-color: rgba(39, 37, 34, 0.8);
+  --header-color: rgba(26, 24, 22, 0.85);
 
   --black-color:  #000000;
   --grey-1-color: #111111;
@@ -93,16 +95,20 @@
 body {
   font-family: var(--readable-font), sans-serif;
   color: var(--grey-8-color);
+}
+
+body.fixed-bg {
   --body-bg: url(../img/backgrounds/w1920/Acceuil.jpg);
   /* background-image: radial-gradient( transparent, black), var(--body-bg); */
   background-image: var(--body-bg);
   /* background-blend-mode: luminosity, normal; */
   background-attachment: fixed;
   background-size: cover;
-  transition: background-image 3s;
-  background-position: 80%;
+  transition: background 3s;
+  background-position: center;
 }
-body::after {
+
+body.fixed-bg.bg-fx-layer::after {
     content: "";
     position: fixed;
     top: 0;
@@ -133,9 +139,6 @@ body::after {
     /* background-position-x: -400px; */
 }
 
-section { margin: 100px 0; background: transparent }
-section#hero { margin: 0 }
-/* section.about, section#hero {  } */
 
 a {
   text-decoration: none;
@@ -230,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 10px 0;
-  background: rgba(26, 24, 22, 0.85);
+  background: var(--header-color);
 }
 #header.sticky-top > .container-fluid {
   flex-wrap: wrap;
@@ -262,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .scrolled #header {
   top: 0;
-  background: rgba(26, 24, 22, 0.85);
+  background: var(--header-color);
 }
 
 #header.sticky-top {
@@ -532,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(39, 37, 34, 0.8); */
+  background-color: var(--hero-bg-color);
   overflow: hidden;
   padding: 0;
 }
@@ -684,6 +687,15 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
+  margin: 500px 0;
+  background: transparent;
+}
+section#hero { margin: 0 }
+/* section.about, section#hero {  } */
+
+section .content {
+  background: var(--header-color);
+  padding: 40px 80px;
 }
 
 .section-bg {
@@ -784,9 +796,9 @@ section {
   background: var(--11-color);
 } */
 
-section .content {
+/* section .content {
   padding: 0 80px;
-}
+} */
 
 section .content h3 {
   font-weight: 400;

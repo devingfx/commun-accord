@@ -3,7 +3,7 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body {% if site.data.theme.fixed-bg %} class="fixed-bg {% if site.data.theme.fixed-bg.fx-layer %} bg-fx-layer{%- endif -%}"{%- endif -%}>
     {{ content }}
   </body>
   

@@ -1,5 +1,6 @@
 ---
 image: w1920/Reglage.jpg
+image-position: 71% 50%
 ---
 
 ## Réglage mécanique
