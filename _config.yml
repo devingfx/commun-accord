@@ -40,8 +40,10 @@ tracking:
 collections:
   - subjects
 
+
 # Build settings
-theme: minima
+markdown: kramdown
+remote_theme: devingfx/blox-theme-jekyll@dev
 # plugins:
 #   - jekyll-feed
 
