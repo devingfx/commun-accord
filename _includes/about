@@ -1,14 +1,19 @@
 
 <!-- { % assign folder = "/assets/img/gallery" | split: '/' %} -->
-{% assign gal = site.static_files %}
+{% assign gallery = '' %}
 {% for i in gal %}
 	{% assign _folder = i.path | truncate: 20, '' %}
 	<div>{{ i.path }}</div>
 	<div>{{ _folder }}</div>
 	{%- if _folder == "/assets/img/gallery/" -%}
-	yes
-	{%- else -%}
-	no
+		{% assign _path = i.path | append: '|' %}
+		{% assign gallery = gallery | append: _path %}
+	{%- endif -%}
+{% endfor %}
+8888888888888888888888888888888888
+{% for i in gallery | split: '|' %}
+	{%- if i -%}
+		<div>{{ i }}</div>
 	{%- endif -%}
 {% endfor %}
     <section id="about" class="about">
