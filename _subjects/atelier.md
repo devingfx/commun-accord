@@ -1,5 +1,5 @@
 ---
-image: w1980/grand-piano-1716052.jpg
+image: ../img/backgrounds/w1980/grand-piano-1716052.jpg
 photos:
   - assets/img/gallery/piano-strings-108429.jpg
   - assets/img/gallery/d9d931_d3dbd410b5044063bdcdf8853bc4a43c.jpg

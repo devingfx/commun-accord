@@ -1,5 +1,5 @@
 ---
-image: w1920/Reparation.jpg
+image: ../img/backgrounds/w1920/Reparation.jpg
 ---
 
 ## Réparation
