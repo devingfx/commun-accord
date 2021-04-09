@@ -122,9 +122,9 @@ numerique:
 
 
 # Présentation
-# about:
-#   about:
-#     image: assets/img/about.png
+about:
+  about:
+    image: assets/img/about.png
   
 #   layout: columns
 
