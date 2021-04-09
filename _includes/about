@@ -2,8 +2,9 @@
 <!-- { % assign folder = "/assets/img/gallery" | split: '/' %} -->
 {% assign gal = site.static_files %}
 {% for i in gal %}
-	{% assign _folder = i.path | truncate: 21, '' %}
+	{% assign _folder = i.path | truncate: 20, '' %}
 	<div>{{ i.path }}</div>
+	<div>{{ _folder }}</div>
 	{%- if _folder == "/assets/img/gallery" -%}
 	yes
 	{%- else -%}
