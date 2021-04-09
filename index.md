@@ -134,8 +134,8 @@ about:
 #       class: video-box
 #       content:
 #         - <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-    - size: 7
-      offset: 4
+    - size: 12
+    #   offset: 4
       content: _subjects/presentation.md
       class: content
 #       content: |
