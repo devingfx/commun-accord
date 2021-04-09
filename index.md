@@ -123,18 +123,19 @@ numerique:
 
 # Présentation
 about:
-  about:
-    image: assets/img/about.png
+#   about:
+#     image: assets/img/about.png
   
 #   layout: columns
 
-#   columns:
+  columns:
 #     - size: 5
 #       background: assets/img/about.png
 #       class: video-box
 #       content:
 #         - <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-#     - size: 7
+    - size: 7
+      content: _subjects/presentation.md
 #       content: |
 #         ### Technicien, accordeur / restaurateur de piano
 #         > Diplômé de l’école Ignace Pleyel à Loos
