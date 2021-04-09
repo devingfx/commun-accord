@@ -3,7 +3,7 @@ image: ../img/backgrounds/w1920/Presentation.jpg
 ---
 
 ## Technicien, accordeur / restaurateur de piano
-> Diplômé de l’école Ignace Pleyel à Loos
+#### Diplômé de l’école Ignace Pleyel à Loos
 
 Mon parcours est quelque peu atypique. Ingénieur en mécanique, j’ai conçu et élaboré des machines automatisées et robotisées pour de nombreux secteurs de l’industrie pendant plus de 15 ans.
 
