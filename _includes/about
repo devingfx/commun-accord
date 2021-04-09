@@ -1,7 +1,14 @@
 
+<!-- { % assign folder = "/assets/img/gallery" | split: '/' %} -->
 {% assign gal = site.static_files %}
 {% for i in gal %}
+	{% assign _folder = i.path | truncate: 21, '' %}
 	<div>{{ i.path }}</div>
+	{%- if _folder == "/assets/img/gallery" -%}
+	yes
+	{%- else -%}
+	no
+	{%- endif -%}
 {% endfor %}
     <section id="about" class="about">
       <div class="container-fluid">
