@@ -5,7 +5,7 @@
 	{% assign _folder = i.path | truncate: 20, '' %}
 	<div>{{ i.path }}</div>
 	<div>{{ _folder }}</div>
-	{%- if _folder == "/assets/img/gallery" -%}
+	{%- if _folder == "/assets/img/gallery/" -%}
 	yes
 	{%- else -%}
 	no
