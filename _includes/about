@@ -1,7 +1,7 @@
 
 {% assign gal = site.static_files %}
 {% for i in gal %}
-	<div>{{ i }}</div>
+	<div>{{ i.path }}</div>
 {% endfor %}
     <section id="about" class="about">
       <div class="container-fluid">
