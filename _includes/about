@@ -6,16 +6,16 @@
 	<!-- <div>{ { i.path }}</div> -->
 	<!-- <div>{ { _folder }}</div> -->
 	{%- if _folder == "/assets/img/gallery/" -%}
-		{% assign _path = i.path | append: '|' %}
+		{% assign _path = '|' | append: i.path %}
 		{% assign gallery = gallery | append: _path %}
 	{%- endif -%}
 {% endfor %}
 8888888888888888888888888888888888
-{% assign gallery = gallery | split: '|' %}
-{% for i in gallery %}
-	{%- if i -%}
-		<div>{{ i }}</div>
-	{%- endif -%}
+{% assign gallery = gallery | remove_first: "|" | split: '|' %}
+{% for file in gallery %}
+	<!-- { %- if file -%} -->
+		<div>{{ file }}</div>
+	<!-- { %- endif -%} -->
 {% endfor %}
     <section id="about" class="about">
       <div class="container-fluid">
