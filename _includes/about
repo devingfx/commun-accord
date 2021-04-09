@@ -1,4 +1,6 @@
 
+{% assign gal = site.static_files %}
+{{ gal }}
 
     <section id="about" class="about">
       <div class="container-fluid">
@@ -11,7 +13,13 @@
 
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
-            <div class="content" data-body-bg="w1920/Presentation.jpg">
+            <div class="content" data-body-bg="../backgrounds/w1920/Presentation.jpg">
+			 {%- if image -%}
+				 	data-body-bg="{{ image }}"
+					{% if position %}
+				 	data-body-bg-position="{{ position }}"
+				 	{%- endif -%}
+				 {%- endif -%}>
               <h3>{{ site.data.user.title }} <br><strong>{{ site.data.user.school }}</strong></h3>
               {% for parag in site.data.user.about %}
               	<p>{{ parag }}</p>

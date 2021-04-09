@@ -177,7 +177,8 @@ contact:
         - body: { size: 12, textarea: Message }
 
 # footer: true
-
+test:
+  about: true
 # content: true
 
 # or all in a map:
@@ -189,5 +190,4 @@ contact:
 #   - content: true
 #   - footer: true
 ---
-
 
