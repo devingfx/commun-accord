@@ -1,7 +1,7 @@
 
 <!-- { % assign folder = "/assets/img/gallery" | split: '/' %} -->
 {% assign gallery = '' %}
-{% for i in gal %}
+{% for i in site.static_files %}
 	{% assign _folder = i.path | truncate: 20, '' %}
 	<div>{{ i.path }}</div>
 	<div>{{ _folder }}</div>
