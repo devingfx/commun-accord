@@ -21,9 +21,6 @@
 
 
 
-- url: "#about"
-  icon:
-  label: Présentation
 
 - url: "#accord"
   icon:
@@ -49,9 +46,11 @@
   icon:
   label: Le numérique #dans l’acoustique
 
-# - url: "#faq"
-#   icon:
-#   label: Questions fréquentes
+
+
+- url: "#about"
+  icon:
+  label: Qui suis-je
 
 - url: "#contact"
   icon:
