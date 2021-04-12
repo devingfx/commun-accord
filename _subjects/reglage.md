@@ -1,6 +1,6 @@
 ---
 image: ../img/backgrounds/w1920/Reglage.jpg
-image-position: 71% 50%
+image-position: 20% 50%
 ---
 
 ## Réglage mécanique
