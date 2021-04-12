@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/* @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+
+:root,
+.theme-light,
+.theme-light * {
+  --readable-font: "Fira Sans";
+  --fantasy-font: "Dosis";
+  /* --logo-font: "Indie Flower"; */
+  --speach-font: "Comic Neue";
+
+  --topbar-height: 50px;
+
+  --accent-color-deeper:  #ff9b08;
+  --accent-color:         #ffb03b;
+  --accent-color-lighter: #ffc56e;
+  
+   --accent-color-deeper:  #9924f4;
+  --accent-color:         #9d4edb;
+  --accent-color-lighter: #bb6ff7;
+
+  --hero-bg-color: rgba(239, 237, 234, 0.8);
+  --header-color: rgba(226, 224, 222, 0.85);
+  --header-effect: blur(5px);
+
+
+  --ko-color: #ed3c0d;
+  --ok-color: #18d26e;
+}
+.theme-dark,
+.theme-dark * {
+  
+}
