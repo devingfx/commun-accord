@@ -15,9 +15,9 @@ header:
   mode: fixed-top
 #   offset: 500px
   logo:
-    text: "MSpianos"
-    # image: ....
-    url: "#"
+    # text: "MSpianos"
+    image: assets/img/apple-touch-icon.png
+    url: "https://p2p.legal"
   nav:
     align: right
   
