@@ -16,8 +16,8 @@ header:
 #   offset: 500px
   logo:
     text: |
-	  Mathieu  
-	  Sarrazy
+      Mathieu  
+      Sarrazy
     # image: assets/img/apple-touch-icon.png
     url: "#"
   nav:
