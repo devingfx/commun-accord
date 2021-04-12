@@ -18,7 +18,7 @@ header:
     text: |
       Mathieu  
       Sarrazy
-      {: style="color:red" }
+      {: style="color:red"}
     # image: assets/img/apple-touch-icon.png
     url: "#"
   nav:
