@@ -20,14 +20,11 @@
   --accent-color:         #ffb03b;
   --accent-color-lighter: #ffc56e;
   
-   --accent-color-deeper:  #9924f4;
-  --accent-color:         #9d4edb;
-  --accent-color-lighter: #bb6ff7;
 
-  --hero-bg-color: rgba(239, 237, 234, 0.8);
-  --header-color: rgba(226, 224, 222, 0.85);
+  --header-color: rgba(26, 24, 22, 0.85);
   --header-effect: blur(5px);
 
+  --hero-bg-color: rgba(39, 37, 34, 0.5);
 
   --ko-color: #ed3c0d;
   --ok-color: #18d26e;
