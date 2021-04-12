@@ -72,14 +72,10 @@ accord:
       offset: 1
       content: _subjects/accord.md
       class: content
-    # - size: 5
-    #   background: assets/img/about.png
 
 # Réglage mécanique
 reglage:
   columns:
-    # - size: 5
-    #   background: assets/img/about.png
     - size: 7
       offset: 4
       content: _subjects/reglage.md
@@ -89,19 +85,15 @@ reglage:
 harmonisation:
   columns:
     - size: 7
-      offset: 1
+      offset: 4
       content: _subjects/harmonisation.md
       class: content
-    # - size: 5
-    #   background: assets/img/about.png
 
 # Réparation
 reparation:
   columns:
-    # - size: 5
-    #   background: assets/img/about.png
     - size: 7
-      offset: 4
+      offset: 1
       content: _subjects/reparation.md
       class: content
 
@@ -112,14 +104,10 @@ restauration:
       offset: 1
       content: _subjects/restauration.md
       class: content
-    # - size: 5
-    #   background: assets/img/about.png
 
 # Le numérique dans l’acoustique
 numerique:
   columns:
-    # - size: 5
-    #   background: assets/img/about.png
     - size: 7
       offset: 4
       content: _subjects/numerique.md
