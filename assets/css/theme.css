@@ -35,3 +35,7 @@
 .theme-dark * {
   
 } */
+
+.gallery {
+    background-color: var(--header-color);
+}
