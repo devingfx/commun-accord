@@ -14,6 +14,10 @@ header:
     - geo-alt: Ardèche / Côte d'Azur
   mode: fixed-top
 #   offset: 500px
+  logo:
+    text: "MSpianos"
+    # image: ....
+    url: "#"
   nav:
     align: right
   
@@ -160,34 +164,9 @@ atelier:
 # Contact
 contact:
   contact:
-  #   map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1468196.3362798623!2d4.  853396502545295!3d44.05091722310776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.  1!3m3!1m2!1s0x12b668198af953ad%3A0xb71690263d16d1a7!2sProvence-Alpes-C%C3%B4te%20d&#39;  Azur!5e0!3m2!1sfr!2sfr!4v1615932586366!5m2!1sfr!2sfr
     form:
-      # external: https://docs.google.com/forms/d/e/  1FAIpQLSeJ3XiqkFkXNDCgGeC3CXIov9JMhvVMYz9THLpwqCYZkSOKwQ/viewform?embedded=true
-      # external: https://cloud.p2p.legal/apps/forms/gnyMHL3n5i9y7bxg
       mailto: contact@exemple.com
-      vars:
-        - name: { size: 6, text: Votre nom }
-        - cc: { size: 6, email: Votre courriel }
-        - subject: { size: 12, text: Sujet, list: [
-              Devis pour un accord,
-              Devis pour un restauration,
-              J'ai piano à donner,
-              Poser une question
-          ]}
-        - body: { size: 12, textarea: Message }
 
-# footer: true
-test:
-  about: true
-# content: true
 
-# or all in a map:
-# blocks:
-#   - header: true
-#   - hero:
-#       carousel:
-#         - slide: '...'
-#   - content: true
-#   - footer: true
+
 ---
-
