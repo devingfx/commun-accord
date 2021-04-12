@@ -14,22 +14,24 @@
   /* --logo-font: "Indie Flower"; */
   --speach-font: "Comic Neue";
 
-  --topbar-height: 50px;
 
   --accent-color-deeper:  #ff9b08;
   --accent-color:         #ffb03b;
   --accent-color-lighter: #ffc56e;
   
 
+  --topbar-height: 50px;
+  --topbar-color: transparent;
+  /* --topbar-text-color: rgba(255, 255, 255, 0.7); */
   --header-color: rgba(26, 24, 22, 0.85);
   --header-effect: blur(5px);
 
   --hero-bg-color: rgba(39, 37, 34, 0.3);
 
-  --ko-color: #ed3c0d;
-  --ok-color: #18d26e;
+  /* --ko-color: #ed3c0d; */
+  /* --ok-color: #18d26e; */
 }
-.theme-dark,
+/* .theme-dark,
 .theme-dark * {
   
-}
+} */
