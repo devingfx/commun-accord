@@ -18,6 +18,7 @@ header:
     text: |
       Mathieu  
       Sarrazy
+      {: .class1 .class2}
     # image: assets/img/apple-touch-icon.png
     url: "#"
   nav:
