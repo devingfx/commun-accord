@@ -1,5 +1,6 @@
 ---
 image: ../img/backgrounds/w1920/Numerique.jpg
+image-position: center
 ---
 
 ## Le numérique dans l’acoustique

@@ -1,5 +1,6 @@
 ---
 image: ../img/backgrounds/w1920/Presentation.jpg
+image-position: center
 ---
 
 ## Technicien, accordeur / restaurateur de piano

@@ -1,5 +1,6 @@
 ---
 image: ../img/backgrounds/w1920/Reparation.jpg
+image-position: center
 ---
 
 ## Réparation
