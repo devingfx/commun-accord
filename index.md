@@ -17,7 +17,7 @@ header:
   logo:
     # text: "MSpianos"
     image: assets/img/apple-touch-icon.png
-    url: "https://p2p.legal"
+    url: "#"
   nav:
     align: right
   
