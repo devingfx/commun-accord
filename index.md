@@ -15,8 +15,10 @@ header:
   mode: fixed-top
 #   offset: 500px
   logo:
-    # text: "MSpianos"
-    image: assets/img/apple-touch-icon.png
+    text: |
+	  Mathieu  
+	  Sarrazy
+    # image: assets/img/apple-touch-icon.png
     url: "#"
   nav:
     align: right
