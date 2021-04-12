@@ -84,8 +84,8 @@ reglage:
 # Harmonisation
 harmonisation:
   columns:
-    - size: 7
-      offset: 4
+    - size: 6
+      offset: 5
       content: _subjects/harmonisation.md
       class: content
 
