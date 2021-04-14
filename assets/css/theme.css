@@ -12,9 +12,8 @@
   --speach-font: "Comic Neue";
 
 
-  --accent-color-deeper:  #ff9b08;
-  --accent-color:         #ffb03b;
-  --accent-color-lighter: #ffc56e;
+  /* --accent-color:         hsl(36, 100%, 62%); */
+  --accent-color-h:       36;
   
 
   --topbar-height: 50px;
