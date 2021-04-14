@@ -23,36 +23,36 @@
 
 
 - url: "#accord"
-  icon:
   label: Accord
+  icon:
   
 - url: "#reglage"
-  icon:
   label: Réglage mécanique
+  icon:
 
 - url: "#harmonisation"
-  icon:
   label: Harmonisation
+  icon:
 
 - url: "#reparation"
-  icon:
   label: Réparation
+  icon:
 
 - url: "#restauration"
-  icon:
   label: Restauration #, Ébénisterie & Laque
+  icon:
   
 - url: "#numerique"
-  icon:
   label: Le numérique #dans l’acoustique
+  icon:
 
 
 
 - url: "#about"
-  icon:
   label: Qui suis-je
+  icon:
 
 - url: "#contact"
-  icon:
-  class: call-to-action book-a-table-btn
   label: Contact
+  class: btn call-to-action
+  icon:
