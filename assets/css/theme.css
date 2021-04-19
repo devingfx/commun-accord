@@ -34,3 +34,7 @@
 .gallery, .contact {
     background-color: var(--solid-color);
 }
+
+section .content {
+  text-align: justify;
+}
