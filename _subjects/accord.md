@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Accord.jpg
+image: ./assets/img/backgrounds/w1920/Accord.jpg
 image-position: 71% 50%
 ---
 
