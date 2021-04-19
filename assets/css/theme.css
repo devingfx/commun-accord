@@ -38,3 +38,30 @@
 section .content {
   text-align: justify;
 }
+
+
+@media (min-height: 1100px) {
+	section {
+		margin: 900px 0;
+	}
+}
+@media (max-height: 1100px) {
+	section {
+		margin: 600px 0;
+	}
+}
+@media (max-height: 900px) {
+	section {
+		margin: 500px 0;
+	}
+}
+@media (max-height: 700px) {
+	section {
+		margin: 400px 0;
+	}
+}
+@media (max-height: 500px) {
+	section {
+		margin: 300px 0;
+	}
+}
