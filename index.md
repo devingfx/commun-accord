@@ -9,8 +9,8 @@ layout: blox
 
 header:
   topbar:
-    - phone: [+36 66 45 89 54](tel:+36 66 45 89 54)
-    - envelope: [aze@exemple.com](mailto:aze@exemple.com)
+    - phone: '[+36 66 45 89 54](tel:+36 66 45 89 54)'
+    - envelope: '[aze@exemple.com](mailto:aze@exemple.com)'
     - geo-alt: Ardèche / Côte d'Azur
   mode: fixed-top
 #   offset: 500px
