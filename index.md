@@ -25,7 +25,7 @@ header:
   
 hero:
   center-text:
-    image: ../img/backgrounds/w1920/Acceuil.jpg
+    image: ./assets/img/backgrounds/w1920/Acceuil.jpg
     title: "**Sarrazy** Mathieu"
     texts:
       - Technicien, accordeur / restaurateur de piano

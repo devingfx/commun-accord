@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Harmonisation.jpg
+image: ./assets/img/backgrounds/w1920/Harmonisation.jpg
 image-position: 40% center
 ---
 

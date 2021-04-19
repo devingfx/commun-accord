@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Reglage.jpg
+image: ./assets/img/backgrounds/w1920/Reglage.jpg
 image-position: 20% 50%
 ---
 

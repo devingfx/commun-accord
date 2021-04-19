@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Restauration.jpg
+image: ./assets/img/backgrounds/w1920/Restauration.jpg
 image-position: 50% 100%
 ---
 

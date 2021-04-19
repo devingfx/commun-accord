@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Numerique.jpg
+image: ./assets/img/backgrounds/w1920/Numerique.jpg
 image-position: 30% center
 ---
 

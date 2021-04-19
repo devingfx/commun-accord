@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Reparation.jpg
+image: ./assets/img/backgrounds/w1920/Reparation.jpg
 image-position: 40% center
 ---
 

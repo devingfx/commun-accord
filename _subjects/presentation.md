@@ -1,5 +1,5 @@
 ---
-image: ../img/backgrounds/w1920/Presentation.jpg
+image: ./assets/img/backgrounds/w1920/Presentation.jpg
 image-position: right center
 ---
 
